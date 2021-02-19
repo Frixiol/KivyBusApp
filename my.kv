@@ -76,18 +76,5 @@
             pos:(20, 0)
             pos_hint: {"top":0.85}
 
-        MapView:
-            pos:(20, 0)
-            pos_hint: {"top":0.7}
-            size_hint: None, .5
-            width: root.width -40
-            lat:48.35
-            lon:-1.2
-            zoom:13
-            canvas.after:
-                Color:
-                    rgba: (1,1,1,1)
-                Line:
-                    width:1.2
-                    rectangle:( self.x-5,self.y-5,self.width+10, self.height+10)
+      
 
