@@ -1,9 +1,6 @@
 import kivy
 from kivy.app import App
 from kivy.uix.screenmanager import  Screen
-from kivy.core.window import Window
-
-Window.size = (270, 585)
 
 class MainScreen(Screen):
 
