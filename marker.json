@@ -1,72 +1,133 @@
 {
-  "Arret-1":
-    {
+  "Ligne-1": {
+
+    "Arret-1": {
       "name": "Iné",
-      "latitude":"48.338720540116846",
-      "longitude":"-1.1924288603375715",
+      "latitude": "48.338720540116846",
+      "longitude": "-1.1924288603375715",
       "ligne": "5"
     },
-  "Arret-2":
-    {
+
+    "Arret-2": {
       "name": "Thérèse Pierre",
-      "latitude":"48.34122119087267",
-      "longitude":"-1.1926377070987542",
+      "latitude": "48.34122119087267",
+      "longitude": "-1.1926377070987542",
       "ligne": "5"
     },
-  "Arret-3":
-    {
+
+    "Arret-3": {
       "name": "Châttière",
-      "latitude":"48.34401468608427",
-      "longitude":"-1.1932353735746233",
+      "latitude": "48.34401468608427",
+      "longitude": "-1.1932353735746233",
       "ligne": "5"
     },
-  "Arret-4":
-    {
+
+    "Arret-4": {
       "name": "Centre Culturel",
-      "latitude":"48.34353365292394",
-      "longitude":"-1.1960132480443804",
+      "latitude": "48.34353365292394",
+      "longitude": "-1.1960132480443804",
       "ligne": "5"
     },
-  "Arret-5":
-    {
+
+    "Arret-5": {
       "name": "Bois Guy",
-      "latitude":"48.3435244749615",
-      "longitude":"-1.197027623409042",
+      "latitude": "48.3435244749615",
+      "longitude": "-1.197027623409042",
       "ligne": "5"
     },
-  "Arret-6":
-    {
+
+    "Arret-6": {
       "name": "Gué Maheu",
-      "latitude":"48.343477922601195",
-      "longitude":"-1.1992638235552704",
+      "latitude": "48.343477922601195",
+      "longitude": "-1.1992638235552704",
       "ligne": "5"
     },
-  "Arret-7":
-    {
+
+    "Arret-7": {
       "name": "Haras",
-      "latitude":"48.346548831738595",
-      "longitude":"-1.202287554107727",
+      "latitude": "48.346548831738595",
+      "longitude": "-1.202287554107727",
       "ligne": "5"
     },
-  "Arret-8":
-    {
+
+    "Arret-8": {
       "name": "Guéhenno",
-      "latitude":"48.34623492496362",
-      "longitude":"-1.1997798518318916",
+      "latitude": "48.34623492496362",
+      "longitude": "-1.1997798518318916",
       "ligne": "5"
     },
-  "Arret-9":
-    {
+
+    "Arret-9": {
       "name": "Roussin",
-      "latitude":"48.346170360060256",
-      "longitude":"-1.1961706730595267",
+      "latitude": "48.346170360060256",
+      "longitude": "-1.1961706730595267",
       "ligne": "5"
     },
-  "Arret-10":
-    {
+
+    "Arret-10": {
       "name": "Chesnardière",
-      "latitude":"48.34796518267939",
-      "longitude":"-1.1955885022724715",
+      "latitude": "48.34796518267939",
+      "longitude": "-1.1955885022724715",
       "ligne": "5"
     }
+  },
+
+  "Ligne-2": {
+
+    "Arret-1": {
+      "name": "Pilais",
+      "latitude": "48.35239067928946",
+      "longitude": "-1.2341895976851163",
+      "ligne": "5"
+    },
+
+    "Arret-2": {
+      "name": "Parc",
+      "latitude": "48.35222640095083",
+      "longitude": "-1.2264823725881797",
+      "ligne": "5"
+    },
+
+    "Arret-3": {
+      "name": "Rochelettes",
+      "latitude": "48.35319208663454",
+      "longitude": "-1.2196567263781048",
+      "ligne": "5"
+    },
+
+    "Arret-4": {
+      "name": "Rocher Coupé",
+      "latitude": "48.353812610556965",
+      "longitude": "-1.215724916712304",
+      "ligne": "5"
+    },
+
+    "Arret-5": {
+      "name": "Château",
+      "latitude": "48.35492150607297",
+      "longitude": "-1.2099120649073996",
+      "ligne": "5"
+    },
+
+    "Arret-6": {
+      "name": "Rennes",
+      "latitude": "48.35647690198876",
+      "longitude": "-1.2055239117470933",
+      "ligne": "5"
+    },
+
+    "Arret-7": {
+      "name": "Leclerc",
+      "latitude": "48.354606022423205",
+      "longitude": "-1.2007453165384447",
+      "ligne": "5"
+    },
+
+    "Arret-8": {
+      "name": "Carnot",
+      "latitude": "48.35372142933207",
+      "longitude": "-1.1987308764917373",
+      "ligne": "5"
+    }
+  }
 }

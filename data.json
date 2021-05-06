@@ -3,7 +3,7 @@
     {
       "latitude":"48.34",
       "longitude":"-1.2",
-      "ligne": "5",
+      "ligne": "1",
       "attente": "10",
       "passager": "5"
     },
@@ -11,7 +11,7 @@
     {
       "latitude":"48.36",
       "longitude":"-1.2",
-      "ligne": "4",
+      "ligne": "2",
       "attente": "20",
       "passager": "10"
     }

@@ -55,7 +55,7 @@ class MainScreen(Screen):
     def bus_choice(self, bus_taken):
         info = data_bus[bus_taken]
         self.information_bus = "Bus selectionné: " + bus_taken + "\nligne: " + info["ligne"] + "\nd'attente: " \
-                               + info["attente"] + "\nNombre de passager: " + info["passager"]
+                               + info["attente"] + "min" + "\nNombre de passager: " + info["passager"]
         self.label_information.text = self.information_bus
         print(self.information_bus)
         busapp.mapscreen.addBusMarker(bus_taken)
@@ -82,11 +82,9 @@ class MapScreen(Screen):
             Rectangle(size=Window.size)
 
         self.mapview = MapView(zoom=13, lat=48.35, lon=-1.2, pos_hint={"top":0.9}, size_hint=(1, .7))
-        for arret in data_stop:
-            arret_marker = MapMarkerPopup(lat=data_stop[arret]["latitude"], lon=data_stop[arret]["longitude"], source="bus_stop.png")
-            arret_marker.add_widget(Label(pos=(0, -30), text=data_stop[arret]["name"], color=(0, 0, 0, 1)))
-            self.mapview.add_marker(arret_marker)
-        self.mapview.remove_marker(arret_marker)
+        self.arret_list = []
+        self.bus_onMap = None
+        self.arret_onMap = None
         self.button_menu = Button(height=40, width=40, size_hint=(None, None), pos=(20, 0), pos_hint={'top': 0.97})
         self.button_menu.bind(on_press=lambda x: self.get_coo())
         self.button_tr_info = Button(size_hint=(1 / 3, .1), pos=(0, 0), pos_hint={'top': 0.1}, text="Menu")
@@ -114,19 +112,35 @@ class MapScreen(Screen):
 
     def addBusMarker(self, bus_taken):
         info = data_bus[bus_taken]
-        try:
+        if self.bus_onMap == True:
             self.mapview.remove_marker(self.bus_marker)
-        except:
-            pass
+            self.removeArretMarker()
+        else:
+            self.bus_onMap = True
         self.bus_marker = MapMarkerPopup(lat=info["latitude"], lon=info["longitude"], source="bus_marker2.png", size=(20, 20))
 
-        self.bus_marker.add_widget(Label(pos=(0,-30), text=bus_taken, color=(0,0,0,1)))
+        self.bus_marker.add_widget(Label(pos=(0,-40), text=bus_taken, color=(0,0,0,1)))
         self.mapview.add_marker(self.bus_marker)
 
         self.mapview.get_latlon_at(Window.size[0]/2, Window.size[1]/2, zoom=None)
+        self.addArretMarker("Ligne-"+info["ligne"])
+
+    def addArretMarker(self, ligne):
+        for arret in data_stop[ligne]:
+            print(arret)
+            arret_marker = MapMarkerPopup(lat=data_stop[ligne][arret]["latitude"], lon=data_stop[ligne][arret]["longitude"],
+                                          source="bus_stop.png")
+            arret_marker.add_widget(Label(pos=(0, -40), text=data_stop[ligne][arret]["name"], color=(0, 0, 0, 1)))
+            self.arret_list.append(arret_marker)
+            self.mapview.add_marker(arret_marker)
+
+    def removeArretMarker(self):
+        for arret in self.arret_list:
+            self.mapview.remove_marker(arret)
+        self.arret_list.clear()
 
     def get_coo(self):
-        print("oui")
+        print(self.arret_list)
         print(str(self.mapview.get_latlon_at(Window.size[0] / 2, Window.size[1] / 2, zoom=None)))
 
 
